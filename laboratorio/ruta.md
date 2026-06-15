@@ -58,6 +58,16 @@ Nivel 5: memoria / estado persistente
 Nivel 6: LLM como detector semántico de intención
 Nivel 7: LLM con salida estructurada: intención + parámetros
 Nivel 8: framework tipo ADK
+  ├─ 8D: Separación por capas
+  ├─ 8E: Session/State/ToolContext
+  ├─ 8F: Callbacks/hooks
+  └─ 8G: Validaciones y guardrails
+Nivel 8.5: Conceptos complementarios ADK
+  ├─ Memoria persistente con ADK (vs manual)
+  ├─ Manejo de errores y recuperación
+  ├─ Flujos condicionales basados en estado
+  ├─ Tool composition
+  └─ Límites de seguridad/ejecución
 Nivel 9: comparación opcional ADK vs LangGraph
 ```
 
@@ -835,6 +845,16 @@ La otra IA debe continuar desde este punto, manteniendo la dinámica de un paso 
 
 ---
 
+## Nivel 8.5: Conceptos complementarios en ADK
+   
+   Después de dominar callbacks y validaciones, exploramos:
+   
+   - Memoria persistente CON ADK: cómo ADK maneja persistencia vs manual JSON
+   - Manejo de errores: recuperación, fallbacks, reintentos
+   - Flujos condicionales: control basado en estado
+   - Tool composition: herramientas que llaman otras herramientas
+   - Límites de seguridad: timeouts, rate limiting, iteración máxima
+
 # Parte H: archivo de código asociado
 
 El código actual reconstruido está separado en:
@@ -844,5 +864,49 @@ laboratorio_agentes_ia_codigo_v1.0.md
 ```
 
 No enviar `.env` con la API key real.
+
+# Parte I: Estado del laboratorio (hoy)
+   
+   - Versión actual: v1.1
+   - Último chat: [fecha]
+   - Nivel alcanzado: 8G Paso 1 ✅
+   - Próximo paso: 8G Paso 2
+   - Archivos en proyecto: ruta.md, codigo.md, checkpoint.md, código Python
+
+## 4. Estructura de archivos y propósito
+
+### En `/laboratorio/`
+
+**`ruta.md`** (este archivo)
+- Conceptual: niveles, decisiones arquitectónicas, aprendizajes
+- Se actualiza cuando hay cambios conceptuales grandes
+- El nuevo chat LEE ESTO primero para entender la estrategia
+
+**`codigo.md`**
+- Código Python actual (archivos espejo de `/adk-project/`)
+- Referencia: qué cambios se hicieron en cada paso
+- NO es la fuente de verdad (la fuente es `/adk-project/` directamente)
+
+**`checkpoint.md`**
+- **CRÍTICO: Indica EXACTAMENTE dónde estamos parados**
+- Qué paso se completó
+- Qué está en progreso
+- Qué falta
+- El nuevo chat LEE ESTO segundo para continuar sin repetir
+
+### En `/adk-project/`
+
+Código Python real (la fuente de verdad)
+- El nuevo chat examina estos archivos
+- Cualquier cambio debe hacerse aquí y reflejarse en `codigo.md`
+
+---
+
+## 5. Cómo cambiar de chat
+
+Cuando cambies:
+1. Actualiza `checkpoint.md` (qué completaste, qué sigue)
+2. Commit y push a GitHub
+3. En el nuevo chat, adjunta o dile: "Hice commit. Lee `checkpoint.md`"
 
 # Fin de laboratorio_agentes_ia_ruta_v1.0.md
