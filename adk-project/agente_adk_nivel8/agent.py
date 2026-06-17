@@ -3,7 +3,6 @@ from .tools_basicas import obtener_hora, sumar
 from .memory_tools import guardar_nombre, consultar_nombre
 from .estado_tools import guardar_nombre_sesion, consultar_nombre_sesion, activar_modo_debug, consultar_modo_debug, consultar_ultima_tool
 from google.adk.tools import ToolContext
-from google.adk.sessions import DatabaseSessionService
 
 def log_antes_de_tool(
     tool,
